@@ -5,6 +5,15 @@ spring:
     redis:
       host: 192.168.150.101
       port: 6379
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/volunteer?useSSL=false&serverTimezone=UTC
+    username: root
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
 langchain4j:
   open-ai:
     chat-model:
@@ -25,6 +34,7 @@ langchain4j:
       model-name: qwen3.7-text-embedding
       log-requests: true
       log-responses: true
+      max-segments-per-batch: 10
   community:
     redis:
       host: 192.168.150.101

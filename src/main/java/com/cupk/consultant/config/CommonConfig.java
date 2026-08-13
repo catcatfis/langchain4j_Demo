@@ -65,7 +65,7 @@ public class CommonConfig {
                 .build();
     }
     //构建向量数据库
-    @Bean
+    //@Bean
     public EmbeddingStore store() {
         //List<Document> documents =ClassPathDocumentLoader.loadDocuments("content");
         //List<Document> documents  = FileSystemDocumentLoader.loadDocuments("D:\\WorkSpace2025\\consultant\\src\\main\\resources\\content");
